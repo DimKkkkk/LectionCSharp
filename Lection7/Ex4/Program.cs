@@ -18,7 +18,20 @@ int PowerRec(int a, int n)
     //и показатель на 1 меньше
 }
 
+//Мы говорили о формулах сокращённого возведения в степень. Значит, в ситуации, прикоторой будет чётная степень, 
+// мы можем сразу же умножать число на само себя, а показатель степени уменьшать в два раза. 
+int PowerRecMath(int a, int n)
+{
+    if (n == 0) return 1;
+    else if (n % 2 == 0) return PowerRecMath(a * a, n / 2); // Есть две формулы. Соответственно, применив их, мы можем сильно улучшить 
+    //решение нашей задачи. 
+    else return PowerRecMath(a, n - 1) * a;
+}
+
+
 Console.WriteLine(PowerFor(2, 10)); // 1024
 Console.WriteLine(PowerRec(2, 10)); // 1024
+Console.WriteLine(PowerRecMath(2, 10)); // 1024
+
 
 
