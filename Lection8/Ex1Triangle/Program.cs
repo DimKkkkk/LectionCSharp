@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Задача треугольник Паскаля
 Console.Clear();
 int row = 9;
 int[,] triangle = new int[row, row];
